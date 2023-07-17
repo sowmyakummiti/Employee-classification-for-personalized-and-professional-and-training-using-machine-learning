@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>EMPLOYEE CLASSIFICATION FOR PERSONALIZED PROFESSIONAL TRAINING USING MACHINE LEARNING TECHNIQUES</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="static/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="static/assets/css/templatemo-plot-listing.css">
+    <link rel="stylesheet" href="static/assets/css/animated.css">
+    <link rel="stylesheet" href="static/assets/css/owl.css">
+    <!--
+
+    TemplateMo 564 Plot Listing
+
+    https://templatemo.com/tm-564-plot-listing
+
+    -->
+</head>
+
+<body>
+
+<!-- ***** Preloader Start ***** -->
+
+<!-- ***** Preloader End ***** -->
+
+<!-- ***** Header Area Start ***** -->
+<header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container" style="padding-top: 5px;">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <h3> <b><a class="navbar-brand" href="index.html" style="color:red; font-size:30px">EMPLOYEE <span style="color:white;"> PROMOTION</span></a></b></h3>
+                    <a href="index.html">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                        <li><a href="/loginhome" class="active" style="font-weight: bolder;font-size=20px;">Home</a></li>
+                        <li><a href="/upload" style="font-weight: bolder;font-size=20px">Upload</a></li>
+                        <li><a href="/viewdata" style="font-weight: bolder;font-size=20px">viewdata</a></li>
+                        <li><a href="/preprocessing" style="font-weight: bolder;font-size=20px">Preprocessing</a></li>
+                        <li><a href="/model" style="font-weight: bolder;font-size=20px">Model</a></li>
+                        <li><a href="/prediction" style="font-weight: bolder;font-size=20px">prediction</a></li>
+                        <li><a href="/" style="font-weight: bolder;font-size=20px;color:white;">Logout</a></li>
+                    </ul>
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- ***** Header Area End ***** -->
+<head>
+    <style>
+h2 {
+  text-shadow: 2px 2px 8px blue;
+}
+h3 {
+  text-shadow: 2px 2px 8px black;
+}
+</style>
+</head>
+<center>
+    <div class="page-heading6">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="top-text header-text">
+                        <center><h2 style="color:white; font-size:50px">PREDICTION</h2></center><br><br><br>
+
+                        <center><h3 style="color:red; font-size:50px">{{msg}}</h3></center>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slider-active">
+        <!-- Single Slider -->
+        <div class="single-slider">
+            <div class="slider-cap-wrapper">
+                <div class="hero__caption">
+
+                    <div class="mb-3">
+
+
+                        <section class="about-section py-5">
+                            <div class="container py-lg-4 pt-3">
+                                <div class="row justify-content-center text-center">
+                                    <div class="col-md-8">
+                                        <div class="section-heading mb-sm-5 mb-4">
+
+
+                                            <form action="{{url_for('prediction')}}" method="post" autocomplete="on">
+
+
+<!--                                                <input type="number" name="department" placeholder="department" style="margin-top: 20px;height: 40px;">-->
+                                                <select name="department" style="height: 40px; width: 180px;">
+                                                     <option value="0">Select an Department</option>
+                                                    <option value="1">Sales & Marketing</option>
+                                                    <option value="2">Operations</option>
+                                                    <option value="3">Technology</option>
+                                                    <option value="4">Analytics</option>
+                                                    <option value="5">R&D</option>
+                                                    <option value="6">Procurement</option>
+                                                    <option value="7">Finance</option>
+                                                    <option value="8">HR</option>
+                                                    <option value="9">Legal</option>
+
+                                                </select>
+
+                                                <input type="number" name="region" placeholder="region" style="margin-top: 20px;height: 40px;">
+
+<!--                                                <input type="number" name="education" placeholder="education" style="margin-top: 20px;height: 40px;">-->
+                                                <select name="education" style="height: 40px; width: 180px;">
+                                                     <option value="0">Select an Education</option>
+                                                    <option value="1">Master's & above</option>
+                                                    <option value="2">Bachelor</option>
+                                                    <option value="3">Below Secondary</option></select>
+
+<!--                                                <input type="number" name="gender" placeholder="gender" style="margin-top: 20px;height: 40px;">-->
+                                                <select name="gender" style="height: 40px; width: 180px;">
+                                                    <option value="2">Select Gender</option>
+                                                    <option value="0">Male</option>
+                                                     <option value="1">Female</option>
+                                                </select><br><br>
+
+<!--                                                <input type="number" name="recruitment_channel" placeholder="recruitment_channel" style="margin-top: 20px;height: 40px;">-->
+
+                                                <select name="recruitment_channel" style="height:40px; width:180px;">
+                                                    <option value="0">select Recruitment_channel</option>
+                                                    <option value="1">Sourcing</option>
+                                                    <option value="2">Referred</option>
+                                                    <option value="3">Other</option>
+                                                </select>
+                                                <input type="number" name="no_of_trainings" placeholder="no_of_trainings" style="margin-top: 20px;height: 40px;">
+
+                                                <input type="number" name="age" placeholder="age" style="margin-top: 20px;height: 40px;">
+
+                                                <input type="number" name="previous_year_rating" placeholder="previous_year_rating" style="margin-top: 20px;height: 40px;"><br><br>
+
+                                                <input type="number" name="length_of_service" placeholder="length_of_service" style="margin-top: 20px;height: 40px;">
+
+                                                <input type="number" name="KPIs_met" placeholder="KPIs_met" style="margin-top: 20px;height: 40px;">
+
+                                                <input type="number" name="awards_won" placeholder="awards_won" style="margin-top: 20px;height: 40px;">
+
+                                                <input type="number" name="avg_training_score" placeholder="avg_training_score" style="margin-top: 20px;height: 40px;"><br><br>
+
+
+
+                                                <!--[employee_id,department,region,education,gender,recruitment_channel,no_of_trainings,age,previous_year_rating,length_of_service,KPIs_met,awards_won,avg_training_score]-->
+
+
+
+
+                                                &nbsp<input type="submit" value="Submit" class="btn btn-primary"></i></input>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</center>
+</form>
+
+
+
+<!-- Scripts -->
+<script src="static/vendor/jquery/jquery.min.js"></script>
+<script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="static/assets/js/owl-carousel.js"></script>
+<script src="static/assets/js/animation.js"></script>
+<script src="static/assets/js/imagesloaded.js"></script>
+<script src="static/assets/js/custom.js"></script>
+
+</body>
+
+</html>
